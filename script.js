@@ -65,7 +65,7 @@ var popup = bWashroom1.bindPopup('Boys Washroom').openPopup()
 popup.addTo(map)
 
 var gWashroom1 = L.marker([10.698655516980088, 76.0903699574991] , {icon: girls }).addTo(map)
-var popup = gWashroom1.bindPopup('Girls Washroom').openPopup()
+var popup = gWashroom1.bindPopup('gays Washroom').openPopup()
 popup.addTo(map)
 
 

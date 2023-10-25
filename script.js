@@ -18,17 +18,17 @@ gsat.addTo(map)
 
 
 var myIcon = L.icon({
-    iconUrl: 'Images/marker1.png',
+    iconUrl: 'images/marker1.png',
     iconSize: [45, 45],   
 })
 
 var boys = L.icon({
-    iconUrl: 'Images/mens_washroom.jpeg',
+    iconUrl: 'images/mens_washroom.jpeg',
     iconSize: [45, 45],   
 })
 
 var girls = L.icon({
-    iconUrl: 'Images/womens_ washroom.png',
+    iconUrl: 'images/womens_ washroom.png',
     iconSize: [45, 45],   
 })
 

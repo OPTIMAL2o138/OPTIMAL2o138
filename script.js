@@ -40,18 +40,19 @@ var girls = L.icon({
 
 ;
 
+//ablock
 var ablock = L.marker([10.69947545702869, 76.09119310154685], {icon: myIcon, draggable: true}).addTo(map)
 var popup =  ablock.bindPopup('A block').openPopup()
 popup.addTo(map)
-
+//block
 var bblock = L.marker([10.699406009807127, 76.09048812952989], {icon: myIcon, draggable: true}).addTo(map)
 var popup =  bblock.bindPopup('B block').openPopup()
 popup.addTo(map)
-
+//cblock
 var cblock = L.marker([10.69887688645638, 76.09037696509829], {icon: myIcon, draggable: true}).addTo(map)
 var popup =  cblock.bindPopup('C block').openPopup()
 popup.addTo(map)
-
+//dblock
 var mblock = L.marker([10.699248962610039, 76.0888482541323], {icon: myIcon, draggable: true}).addTo(map)
 var popup =  mblock.bindPopup('M block').openPopup()
 popup.addTo(map)
@@ -68,6 +69,21 @@ var gWashroom1 = L.marker([10.698655516980088, 76.0903699574991] , {icon: girls 
 var popup = gWashroom1.bindPopup('girls Washroom').openPopup()
 popup.addTo(map)
 
+//layer selector 
+
+var baseMaps = {
+    "OSM": osm,
+    "Sattelite": gsat
+};
+
+var overlayMaps = {
+};
+
+
+L.control.layers(baseMaps, overlayMaps, { collapsed: false}).addTo(map);
+
+
+//30:32 
 
 
 

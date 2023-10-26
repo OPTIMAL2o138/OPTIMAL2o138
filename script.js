@@ -40,7 +40,7 @@ var girls = L.icon({
 
 ;
 
-//ablock
+// //ablock
 // var ablock = L.marker([10.69947545702869, 76.09119310154685], {icon: myIcon, draggable: false}).addTo(map)
 // var popup =  ablock.bindPopup('A block').openPopup()
 // popup.addTo(map)
@@ -76,18 +76,26 @@ var baseMaps = {
     "Sattelite": gsat
 };
 
-var overlayMaps = {
+var klm = L.geoJSON(pointJson, { 
+    onEachFeature: function(feature, layer) {
+        layer.bindPopup(feature.properties.name)
+    }
+}
+    
+    );
 
+var overlayMaps = {
+    "LP block" : klm
 }
 
 
-L.control.layers(baseMaps, overlayMaps, { collapsed: false}).addTo(map);
+var layerControl = L.control.layers(baseMaps, overlayMaps, { collapsed: false}).addTo(map);
 
 
 //geojson
 
 
-var klm = L.geoJSON(pointJson);
+
 klm.addTo(map)
 
 

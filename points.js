@@ -51,7 +51,7 @@ var pointJson = {
     {
       "type": "Feature",
       "properties": {
-        "name ": "Vanaspathi ",
+        "name": "Vanaspathi ",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle",

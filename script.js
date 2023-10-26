@@ -66,13 +66,13 @@ var popup = bWashroom1.bindPopup('Boys Washroom').openPopup()
 popup.addTo(map)
 
 var gWashroom1 = L.marker([10.698655516980088, 76.0903699574991] , {icon: girls }).addTo(map)
-var popup = gWashroom1.bindPopup('girls Washroom').openPopup()
+var popup = gWashroom1.bindPopup('gisls Washroom').openPopup()
 popup.addTo(map)
 
 //layer selector 
 
 var baseMaps = {
-    "OSM": osm,
+    "OSM": ors,
     "Sattelite": gsat
 };
 

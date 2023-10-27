@@ -104,39 +104,42 @@ klm.addTo(map)
 
 
 
-if(!navigator.geolocation) {
-    console.log("Your browser doesn't support geo location feature. ")
-} else { 
+if (!navigator.geolocation) {
+    console.log("Your browser doesn't support geolocation feature.");
+} else {
+    // Request high accuracy and reduce the timeout to get updates more frequently.
     setInterval(() => {
-        navigator.geolocation.getCurrentPosition(getPosition);
+        navigator.geolocation.getCurrentPosition(getPosition, error => {
+            console.error("Error getting user location: " + error.message);
+        }, { enableHighAccuracy: true, timeout: 5000 });
     }, 2000);
-    
 }
 
-
-
-var gpsloc,circ;
+var gpsloc, circ;
 
 function getPosition(position) {
-    console.log(position)
-    var lat =  position.coords.latitude
-    var long =  position.coords.longitude
-    var accuracy = position.coords.accuracy
+    var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+    var accuracy = position.coords.accuracy;
 
-    if(gpsloc){
-        map.removeLayer(gpsloc)
+    // Remove previous location marker and accuracy circle if they exist
+    if (gpsloc) {
+        map.removeLayer(gpsloc);
     }
 
-    if(circ) {
-        map.removeLayer(circ)
+    if (circ) {
+        map.removeLayer(circ);
     }
 
-    gpsloc = L.marker([lat, long], {icon: myIcon,})
-    circ = L.circle([lat,long], {radius: accuracy}) 
+    gpsloc = L.marker([lat, long], { icon: myIcon });
+    circ = L.circle([lat, long], { radius: accuracy });
 
-    var pointer = L.featureGroup([gpsloc, circ]).addTo(map)
+    // Add the new marker and accuracy circle to the map
+    var pointer = L.featureGroup([gpsloc, circ]).addTo(map);
 
-
-    console.log(lat, long, accuracy)
+    console.log("Latitude:", lat);
+    console.log("Longitude:", long);
+    console.log("Accuracy:", accuracy);
 }
 
+// Include the Leaflet map initialization code here, which you already have in your original code.

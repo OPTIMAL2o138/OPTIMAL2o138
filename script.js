@@ -136,7 +136,6 @@ function getPosition(position) {
 
     var pointer = L.featureGroup([gpsloc, circ]).addTo(map)
 
-    map.fitBounds(pointer.getBounds())
 
     console.log(lat, long, accuracy)
 }

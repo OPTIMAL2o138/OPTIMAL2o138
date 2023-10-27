@@ -104,5 +104,39 @@ map.on('mousemove', function(e){
 })
 
 
+navigator.geolocation.getCurrentPosition
 
+if(!navigator.geolocation) {
+    console.log("Your browser doesn't support geo location feature. ")
+} else { 
+    setInterval(() => {
+        navigator.geolocation.getCurrentPosition(getPosition)
+    }, 2000);
+    
+}
 
+var gpsloc,circ;
+
+function getPosition(position) {
+    console.log(position)
+    var lat =  position.coords.latitude
+    var long =  position.coords.longitude
+    var accuracy = position.coords.accuracy
+
+    if(gpsloc){
+        map.removeLayer(gpsloc)
+    }
+
+    if(circ) {
+        map.removeLayer(circ)
+    }
+
+    gpsloc = L.marker([lat, long], {icon: myIcon,})
+    circ = L.circle([lat,long], {radius: accuracy}) 
+
+    var pointer = L.featureGroup([gpsloc, circ]).addTo(map)
+
+    map.fitBounds(pointer.getBounds())
+
+    console.log(lat, long, accuracy)
+}

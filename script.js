@@ -14,7 +14,7 @@ var gsat =  L.tileLayer('http://{s}.google.com/vt?lyrs=s&x={x}&y={y}&z={z}',{
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
 });
-gsat.addTo(map)
+osm.addTo(map)
 
 
 var myIcon = L.icon({
@@ -72,8 +72,9 @@ var girls = L.icon({
 //layer selector 
 
 var baseMaps = {
+    "Sattelite": gsat,
     "OSM": osm,
-    "Sattelite": gsat
+    
 };
 
 var klm = L.geoJSON(pointJson, { 
@@ -99,21 +100,20 @@ var layerControl = L.control.layers(baseMaps, overlayMaps, { collapsed: false}).
 klm.addTo(map)
 
 
-map.on('mousemove', function(e){
-    console.log(e.latlng.lat, e.latlng.lng)
-})
 
 
-navigator.geolocation.getCurrentPosition
+
 
 if(!navigator.geolocation) {
     console.log("Your browser doesn't support geo location feature. ")
 } else { 
     setInterval(() => {
-        navigator.geolocation.getCurrentPosition(getPosition)
+        navigator.geolocation.getCurrentPosition(getPosition);
     }, 2000);
     
 }
+
+
 
 var gpsloc,circ;
 
@@ -139,3 +139,4 @@ function getPosition(position) {
 
     console.log(lat, long, accuracy)
 }
+

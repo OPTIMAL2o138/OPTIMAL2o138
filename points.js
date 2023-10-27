@@ -52,7 +52,7 @@ var pointJson = {
       "type": "Feature",
       "properties": {
         "name": "Vanaspathi ",
-        "marker-color": "#7e7e7e",
+        "marker-color": "#fc4503",
         "marker-size": "medium",
         "marker-symbol": "circle",
         "venue": "computer lab 6",

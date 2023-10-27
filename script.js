@@ -99,5 +99,10 @@ var layerControl = L.control.layers(baseMaps, overlayMaps, { collapsed: false}).
 klm.addTo(map)
 
 
+map.on('mousemove', function(e){
+    console.log(e.latlng.lat, e.latlng.lng)
+})
+
+
 
 

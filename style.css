@@ -2,9 +2,14 @@ body {
      margin:0; 
 }
 
+        
 
-
-.layerControl {
-    width: 1000px;
-    height: 100px;
+.leaflet-popup-content-wrapper {
+    background-color: blueviolet;
+    color: aliceblue;
 }
+
+.leaflet-popup-tip {
+    background-color: blueviolet;
+}
+

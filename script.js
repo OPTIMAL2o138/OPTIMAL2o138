@@ -112,6 +112,97 @@ var SAAVERII = L.icon({
     iconSize: [60,60]
 })
 
+var DHANASREEI = L.icon({
+    iconUrl: 'images/DHANASREE.png',
+    iconSize: [60,60]
+})
+
+var DHANASREEI = L.icon({
+    iconUrl: 'images/DHANASREE.png',
+    iconSize: [60,60]
+})
+
+var DHANASREEI = L.icon({
+    iconUrl: 'images/DHANASREE.png',
+    iconSize: [60,60]
+})
+
+var NEELAMBHARII  = L.icon({
+    iconUrl: 'images/NEELAMBHARI.png',
+    iconSize: [60,60]
+})
+
+var SREERAGAMI  = L.icon({
+    iconUrl: 'images/SREERAGAM.png',
+    iconSize: [60,60]
+})
+
+var KALYANII = L.icon({
+    iconUrl: 'images/KALYANI.png',
+    iconSize: [60,60]
+})
+
+var CHAKRAVAKAMI = L.icon({
+    iconUrl: 'images/CHAKRAVAKAM.png',
+    iconSize: [60,60]
+})
+
+var BIHAGI = L.icon({
+    iconUrl: 'images/BIHAG.png',
+    iconSize: [60,60]
+})
+
+var AMRITHAVARSHINII = L.icon({
+    iconUrl: 'images/AMRITHAVARSHINI.png',
+    iconSize: [60,60]
+})
+
+var MEGHI = L.icon({
+    iconUrl: 'images/MEGH.png',
+    iconSize: [60,60]
+})
+
+var ASARAVII = L.icon({
+    iconUrl: 'images/ASARAVI.png',
+    iconSize: [60,60]
+})
+
+var MARWAI = L.icon({
+    iconUrl: 'images/MARWA.png',
+    iconSize: [60,60]
+})
+
+
+var AHRII = L.icon({
+    iconUrl: 'images/AHIRI.png',
+    iconSize: [60,60]
+})
+
+var KHAMAJII = L.icon({
+    iconUrl: 'images/KHAMAJ.png',
+    iconSize: [60,60]
+})
+
+
+var KAFII = L.icon({
+    iconUrl: 'images/KAFI.png',
+    iconSize: [60,60]
+})
+
+var ANANDABHAIRAVII = L.icon({
+    iconUrl: 'images/ANANDABHAIRAVI.png',
+    iconSize: [60,60]
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,42 +248,6 @@ var SAAVERII = L.icon({
 
 //layer selector 
 
-//FIRST FLOOR
-
-var BHILAHARI = L.marker([10.699464058173962, 76.09059998782192] , {icon: BHILAHARII }).addTo(map)
-var popup7 = BHILAHARI.bindPopup('BHILAHARI')
-
-var CHARUKESI = L.marker([10.699277591005009, 76.09037937613925] , {icon: CHARUKESII }).addTo(map)
-var popup8 = CHARUKESI.bindPopup('CHARUKESI')
-CHARUKESI.addTo(map)
-
-var ABHOGI = L.marker([10.699161051603355, 76.090408179474] , {icon: ABHOGII }).addTo(map)
-var popup9 = ABHOGI.bindPopup('ABHOGI (B block)')
-ABHOGI.addTo(map)
-
-var ABHOGI2 = L.marker([10.698987103264134, 76.09036392302698] , {icon: ABHOGII }).addTo(map)
-var popup10 = ABHOGI2.bindPopup('ABHOGI (C Block)')
-
-var BHAVAPRIYA = L.marker([10.69891198917551, 76.09035989972062] , {icon: BHAVAPRIYAI }).addTo(map)
-var popup14 = BHAVAPRIYA.bindPopup('BHAVAPRIYA')
-
-var firstfloor = L.featureGroup([BHILAHARI, ABHOGI2,CHARUKESI,ABHOGI,BHAVAPRIYA])
-
-
-//SECOND FLOOR
-
-var BAGESHRI = L.marker([10.699458872018775, 76.09069115252248] , {icon: BAGESHRII }).addTo(map)
-var popup11 = BAGESHRI.bindPopup('BAGESHRI')
-
-var HINDOL = L.marker([10.699236165633762, 76.0904846224364] , {icon: HINDOLI }).addTo(map)
-var popup12 = HINDOL.bindPopup('HINDOL')
-
-var PURVI = L.marker([10.698847417402146, 76.090392086227574] , {icon: PURVII }).addTo(map)
-var popup13 = PURVI.bindPopup('PURVI')
-
-var secondfloor = L.featureGroup([BAGESHRI, HINDOL, PURVI])
-
-
 //Ground floor
 
 var VANASPATHI = L.marker([10.69920717425842, 76.0887210700041] , {icon: VANASPATHII }).addTo(map)
@@ -222,33 +277,94 @@ var popup21 = HAMSADHWANI.bindPopup('HAMSADHWANI')
 var SAAVERI = L.marker([10.69928599446213, 76.08911922144627] , {icon: SAAVERII }).addTo(map)
 var popup22 = SAAVERI.bindPopup('SAAVERI')
 
+var DHANASREE = L.marker([10.69984727509778, 76.08926198259117] , {icon: DHANASREEI }).addTo(map)
+var popup23 = DHANASREE.bindPopup('DHANASREE')
+
+var NEELAMBHARI  = L.marker([10.700977467289936, 76.08880748844285] , {icon: NEELAMBHARII }).addTo(map)
+var popup24 = NEELAMBHARI .bindPopup('NEELAMBHARI ')
+
+var SREERAGAM  = L.marker([10.701164826547634, 76.0891779969983] , {icon: SREERAGAMI }).addTo(map)
+var popup25 = SREERAGAM .bindPopup('SREERAGAM ')
+
+var MARWA  = L.marker([10.700059777622847, 76.08968569567418] , {icon: MARWAI }).addTo(map)
+var popup28 = MARWA.bindPopup('MARWA ')
+
+var ANANDABHAIRAVI  = L.marker([10.700088243025572, 76.08966118726822] , {icon: ANANDABHAIRAVII }).addTo(map)
+var popup31 = ANANDABHAIRAVI.bindPopup('ANANDABHAIRAVI ')
+
+
+
+
+//FIRST FLOOR
+
+var BHILAHARI = L.marker([10.699464058173962, 76.09059998782192] , {icon: BHILAHARII }).addTo(map)
+var popup7 = BHILAHARI.bindPopup('BHILAHARI')
+
+var CHARUKESI = L.marker([10.699277591005009, 76.09037937613925] , {icon: CHARUKESII }).addTo(map)
+var popup8 = CHARUKESI.bindPopup('CHARUKESI')
+CHARUKESI.addTo(map)
+
+var ABHOGI = L.marker([10.699161051603355, 76.090408179474] , {icon: ABHOGII }).addTo(map)
+var popup9 = ABHOGI.bindPopup('ABHOGI (B block)')
+ABHOGI.addTo(map)
+
+var ABHOGI2 = L.marker([10.698987103264134, 76.09036392302698] , {icon: ABHOGII }).addTo(map)
+var popup10 = ABHOGI2.bindPopup('ABHOGI (C Block)')
+
+var BHAVAPRIYA = L.marker([10.69891198917551, 76.09035989972062] , {icon: BHAVAPRIYAI }).addTo(map)
+var popup14 = BHAVAPRIYA.bindPopup('BHAVAPRIYA')
+
+var KALYANI  = L.marker([10.699421732080468, 76.08992795794437] , {icon: KALYANII }).addTo(map)
+var popup26 = KALYANI.bindPopup('KALYANI ')
+
+var CHAKRAVAKAM  = L.marker([10.700065981722384, 76.08967473219062] , {icon: CHAKRAVAKAMI }).addTo(map)
+var popup27 = CHAKRAVAKAM .bindPopup('CHAKRAVAKAM ')
+
+var BIHAG  = L.marker([10.700079818476514, 76.08963181684805] , {icon: BIHAGI }).addTo(map)
+var popup26 = BIHAG .bindPopup('BIHAG ')
+
+var  AHIRI  = L.marker([10.7001440897146, 76.08936073123772] , {icon: AHRII }).addTo(map)
+var popup29 =  AHIRI.bindPopup(' AHIRI ')
+
+var AMRITHAVARSHINI  = L.marker([10.70011935205628, 76.08941791068749] , {icon: AMRITHAVARSHINII }).addTo(map)
+var popup26 = AMRITHAVARSHINI .bindPopup('AMRITHAVARSHINI ')
+
+
+
+var firstfloor = L.featureGroup([BHILAHARI, ABHOGI2,CHARUKESI,ABHOGI,BHAVAPRIYA, KALYANI, CHAKRAVAKAM, BIHAG,AHIRI,AMRITHAVARSHINI])
+
+
+//SECOND FLOOR
+
+var BAGESHRI = L.marker([10.699458872018775, 76.09069115252248] , {icon: BAGESHRII }).addTo(map)
+var popup11 = BAGESHRI.bindPopup('BAGESHRI')
+
+var HINDOL = L.marker([10.699236165633762, 76.0904846224364] , {icon: HINDOLI }).addTo(map)
+var popup12 = HINDOL.bindPopup('HINDOL')
+
+var PURVI = L.marker([10.698815022987706, 76.09038647552862] , {icon: PURVII }).addTo(map)
+var popup13 = PURVI.bindPopup('PURVI')
+
+var MEGH  = L.marker([10.700117375377422, 76.08963114629584] , {icon: MEGHI }).addTo(map)
+var popup27 = MEGH.bindPopup('MEGH ')
+
+var ASARAVI  = L.marker([10.700137142165493, 76.08947758983574] , {icon: ASARAVII }).addTo(map)
+var popup27 = ASARAVI.bindPopup('ASARAVI ')
+
+var KHAMAJ  = L.marker([10.70015097578137, 76.08937354288275] , {icon: KHAMAJII }).addTo(map)
+var popup30 = KHAMAJ.bindPopup('KHAMAJ')
+
+var KAFI  = L.marker([10.700086850223897, 76.08949454056238] , {icon: KAFII }).addTo(map)
+var popup31 = KAFI.bindPopup('KAFI')
 
 
 
 
 
-
-//add dhanshreee 
-
+var secondfloor = L.featureGroup([BAGESHRI, HINDOL, PURVI,MEGH,ASARAVI,KHAMAJ,KAFI])
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//birder
 
 var baseMaps = {
     "Sattelite": gsat,

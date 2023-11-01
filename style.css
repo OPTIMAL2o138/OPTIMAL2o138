@@ -14,3 +14,53 @@ body {
 }
 
 
+.custom-icon {
+    background-image: url('images/green_roomG.png');
+    background-size: 100% 100%;
+    width: 60px;  /* Adjust the width and height to match your icon's dimensions */
+    height: 60px;
+}
+.custom-icon div {
+    font-weight: bold;
+    color: #110f0f;
+    text-align: center;
+    position: absolute; /* Position the text absolutely within the .custom-icon container */
+    top: -10px; /* Adjust the top value to move the text above the marker */
+    width: 100%; /* Make the text span the full width of the marker */
+    white-space: nowrap;
+    right: 20
+}
+
+.custom-icon2 {
+    background-image: url('images/green_room1.png');
+    background-size: 100% 100%;
+    width: 60px;  /* Adjust the width and height to match your icon's dimensions */
+    height: 60px;
+}
+.custom-icon2 div {
+    font-weight: bold;
+    color: #110f0f;
+    text-align: center;
+    position: absolute; /* Position the text absolutely within the .custom-icon container */
+    top: -10px; /* Adjust the top value to move the text above the marker */
+    width: 100%; /* Make the text span the full width of the marker */
+    white-space: nowrap;
+    right: 20
+}
+
+.custom-icon3 {
+    background-image: url('images/green_room2.png');
+    background-size: 100% 100%;
+    width: 60px;  /* Adjust the width and height to match your icon's dimensions */
+    height: 60px;
+}
+.custom-icon3 div {
+    font-weight: bold;
+    color: #110f0f;
+    text-align: center;
+    position: absolute; /* Position the text absolutely within the .custom-icon container */
+    top: -10px; /* Adjust the top value to move the text above the marker */
+    width: 100%; /* Make the text span the full width of the marker */
+    white-space: nowrap;
+    right: 20
+}

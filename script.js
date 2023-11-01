@@ -196,6 +196,54 @@ var ANANDABHAIRAVII = L.icon({
 
 
 
+//bark
+
+
+var customIcon = L.divIcon({   //second floor
+    className: 'custom-icon',
+    html: '<div class="icon"></div><div class="label">Green Room 1 to 23</div>',
+    iconSize: [50, 50], // Adjust the size of the icon container
+});
+
+var customIcon2 = L.divIcon({   //first floor
+    className: 'custom-icon2',
+    html: '<div class="icon"></div><div class="label">Green Room 24 to 45</div>',
+    iconSize: [50, 50], // Adjust the size of the icon container
+});
+
+var customIcon3 = L.divIcon({    //Second floor
+    className: 'custom-icon3',
+    html: '<div class="icon"></div><div class="label">Green Room 46-60/div>',
+    iconSize: [50, 50], // Adjust the size of the icon container
+});
+
+
+
+
+var greenLP = L.marker([10.699125243762452, 76.08880483564707], {
+    icon: customIcon,
+}).addTo(map).bindPopup("Ground Floor");
+
+var greenLP2 = L.marker([10.699057360977138, 76.08849245693403], {
+    icon: customIcon,
+}).addTo(map).bindPopup("Ground Floor");
+
+var greenLP3 = L.marker([10.699065494529627, 76.08880050951397], {
+    icon: customIcon2,
+}).addTo(map).bindPopup("First Floor");
+
+var greenLP4 = L.marker([10.699024885502318, 76.0883665711027], {
+    icon: customIcon2,
+}).addTo(map).bindPopup("First Floor");
+
+var greenLP5 = L.marker([10.699251772932291, 76.08881035038581], {
+    icon: customIcon3,
+}).addTo(map).bindPopup("Second Floor");
+
+
+var greenLP6 = L.marker([10.699035655343925, 76.08866081723203], {
+    icon: customIcon3,
+}).addTo(map).bindPopup("Second Floor");
 
 
 
@@ -213,40 +261,6 @@ var ANANDABHAIRAVII = L.icon({
 
 
 
-
-
-
-// //ablock
-// var ablock = L.marker([10.69947545702869, 76.09119310154685], {icon: myIcon, draggable: false}).addTo(map)
-// var popup1 =  ablock.bindPopup('A block').openPopup()
-// popup1.addTo(map)
-// //block
-// var bblock = L.marker([10.699406009807127, 76.09048812952989], {icon: myIcon, draggable: false}).addTo(map)
-// var popup2 =  bblock.bindPopup('B block').openPopup()
-// popup2.addTo(map)
-// //cblock
-// var cblock = L.marker([10.69887688645638, 76.09037696509829], {icon: myIcon, draggable: false}).addTo(map)
-// var popup3 =  cblock.bindPopup('C block').openPopup()
-// popup3.addTo(map)
-// //dblock
-// var mblock = L.marker([10.699248962610039, 76.0888482541323], {icon: myIcon, draggable: false}).addTo(map)
-// var popup4 =  mblock.bindPopup('M block').openPopup()
-// popup4.addTo(map)
-
-// var mosque1 = L.marker([10.699764328360253, 76.09067589390187], {icon: myIcon, draggable: false}).addTo(map)
-// var popup5 =  mosque1.bindPopup('Mosque').openPopup()
-// popup5.addTo(map)
-
-// var bWashroom1 = L.marker([10.699810830576139, 76.09074298537598] , {icon: boys }).addTo(map)
-// var popup6 = bWashroom1.bindPopup('Boys Washroom').openPopup()
-// popup6.addTo(map)
-
-// var gWashroom1 = L.marker([10.698655516980088, 76.0903699574991] , {icon: girls }).addTo(map)
-// var popup7 = gWashroom1.bindPopup('Girls Washroom').openPopup()
-// popup7.addTo(map)
-
-
-//layer selector 
 
 //Ground floor
 
@@ -293,6 +307,8 @@ var ANANDABHAIRAVI  = L.marker([10.700088243025572, 76.08966118726822] , {icon: 
 var popup31 = ANANDABHAIRAVI.bindPopup('ANANDABHAIRAVI ')
 
 
+var groundFloor = L.featureGroup([VANASPATHI,VANASPATHI2,VANASPATHI3,VANASPATHI4,SOORYAKANTHAM,SAHAANA,MOHANAM,
+    HAMSADHWANI,SAAVERI,DHANASREE,NEELAMBHARI,SREERAGAM,MARWA,ANANDABHAIRAVI])
 
 
 //FIRST FLOOR
@@ -364,6 +380,9 @@ var popup31 = KAFI.bindPopup('KAFI')
 var secondfloor = L.featureGroup([BAGESHRI, HINDOL,MARWA, PURVI,MEGH,ASARAVI,KHAMAJ,KAFI])
 
 
+
+
+
 //birder
 
 var baseMaps = {
@@ -380,21 +399,17 @@ var klm = L.geoJSON(pointJson, {
     );
 
 var overlayMaps = {
+    "Ground floor" :groundFloor,
     "1st Floor" : firstfloor,
-    "2nd Floor" : secondfloor,
+    "2nd Floor" : secondfloor
     };
-
-
-
-
-
 
 
 var layerControl = L.control.layers(baseMaps, overlayMaps, { collapsed: false}).addTo(map);
 
 
 //geojson
-
+groundFloor.addTo(map)
 firstfloor.addTo(map)
 secondfloor.addTo(map)
 

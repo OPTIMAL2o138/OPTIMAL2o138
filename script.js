@@ -256,10 +256,10 @@ var popup14 = VANASPATHI.bindPopup('VANASPATHI (lab 5)')
 var VANASPATHI2 = L.marker([10.699113611163199, 76.08873716325755] , {icon: VANASPATHII }).addTo(map)
 var popup15 = VANASPATHI2.bindPopup('VANASPATHI (lab 6)')
 
-var VANASPATHI3 = L.marker([10.69900687012808, 76.08865803809793] , {icon: VANASPATHIIB }).addTo(map) //basement
+var VANASPATHI3 = L.marker([10.69900687012808, 76.08865803809793] , {icon: VANASPATHII }).addTo(map) //basement
 var popup16 = VANASPATHI3.bindPopup('VANASPATHI (lab 4)')
 
-var VANASPATHI4 = L.marker([10.698993692220384, 76.08847967120542] , {icon: VANASPATHIIB }).addTo(map)  //basement icon
+var VANASPATHI4 = L.marker([10.698993692220384, 76.08847967120542] , {icon: VANASPATHII }).addTo(map)  //basement icon
 var popup17 = VANASPATHI4.bindPopup('VANASPATHI (lab 7/3)')
 
 var SOORYAKANTHAM = L.marker([10.699681578248015, 76.09008363215514] , {icon: SOORYAKANTHAMI }).addTo(map)
@@ -300,7 +300,7 @@ var popup31 = ANANDABHAIRAVI.bindPopup('ANANDABHAIRAVI ')
 var BHILAHARI = L.marker([10.699464058173962, 76.09059998782192] , {icon: BHILAHARII }).addTo(map)
 var popup7 = BHILAHARI.bindPopup('BHILAHARI')
 
-var CHARUKESI = L.marker([10.699277591005009, 76.09037937613925] , {icon: CHARUKESII }).addTo(map)
+var CHARUKESI = L.marker([10.700112766989852, 76.08937266618754 ] , {icon: CHARUKESII }).addTo(map)
 var popup8 = CHARUKESI.bindPopup('CHARUKESI')
 CHARUKESI.addTo(map)
 
@@ -317,7 +317,7 @@ var popup14 = BHAVAPRIYA.bindPopup('BHAVAPRIYA')
 var KALYANI  = L.marker([10.699421732080468, 76.08992795794437] , {icon: KALYANII }).addTo(map)
 var popup26 = KALYANI.bindPopup('KALYANI ')
 
-var CHAKRAVAKAM  = L.marker([10.700065981722384, 76.08967473219062] , {icon: CHAKRAVAKAMI }).addTo(map)
+var CHAKRAVAKAM  = L.marker([10.700121597915517, 76.08968359958921] , {icon: CHAKRAVAKAMI }).addTo(map)
 var popup27 = CHAKRAVAKAM .bindPopup('CHAKRAVAKAM ')
 
 var BIHAG  = L.marker([10.700079818476514, 76.08963181684805] , {icon: BIHAGI }).addTo(map)
@@ -361,7 +361,7 @@ var popup31 = KAFI.bindPopup('KAFI')
 
 
 
-var secondfloor = L.featureGroup([BAGESHRI, HINDOL, PURVI,MEGH,ASARAVI,KHAMAJ,KAFI])
+var secondfloor = L.featureGroup([BAGESHRI, HINDOL,MARWA, PURVI,MEGH,ASARAVI,KHAMAJ,KAFI])
 
 
 //birder

@@ -42,70 +42,31 @@ var locator = L.icon({
     iconSize: [45, 45,1]
 })
 
-// var BHILAHARII = L.icon({
-//     iconUrl: 'images/BHILAHARI.png',
-//     iconSize: [60,60]
-// })
+var AWCAUDI = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
 
-// var CHARUKESII = L.icon({
-//     iconUrl: 'images/CHARUKESI.png',
-//     iconSize: [60,60]
-// })
+var AUDI = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
 
-// var ABHOGII = L.icon({
-//     iconUrl: 'images/ABHOGI.png',
-//     iconSize: [60,60]
-// })
+var LPHALLI = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
 
-// var BAGESHRII = L.icon({
-//     iconUrl: 'images/BAGESHRI.png',
-//     iconSize: [60,60]
-// })
+var AVROOMI = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
 
-// var HINDOLI = L.icon({
-//     iconUrl: 'images/HINDOL.png',
-//     iconSize: [60,60]
-// })
+var PHALLI = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
 
-// var PURVII = L.icon({
-//     iconUrl: 'images/PURVI.png',
-//     iconSize: [60,60]
-// })
-
-// var BHAVAPRIYAI = L.icon({
-//     iconUrl: 'images/BHAVAPRIYA.png',
-//     iconSize: [60,60]
-// })
-
-// var VANASPATHII = L.icon({
-//     iconUrl: 'images/VANASPATHI.png',
-//     iconSize: [60,60]
-// })
-
-// var VANASPATHIIB = L.icon({
-//     iconUrl: 'images/VANASPATHI2.png',
-//     iconSize: [60,60]
-// })
-
-// var SOORYAKANTHAMI = L.icon({
-//     iconUrl: 'images/SOORYAKANTHAM.png',
-//     iconSize: [60,60]
-// })
-
-// var SAHAANAI = L.icon({
-//     iconUrl: 'images/SAHAANA.png',
-//     iconSize: [60,60]
-// })
-
-// var MOHANAMI = L.icon({
-//     iconUrl: 'images/MOHANAM.png',
-//     iconSize: [60,60]
-// })
-
-// var HAMSADHWANII = L.icon({
-//     iconUrl: 'images/HAMSADHWANI.png',
-//     iconSize: [60,60]
-// })
 
 
 
@@ -181,8 +142,8 @@ var locator = L.icon({
 // var VANASPATHI = L.marker([10.69920717425842, 76.0887210700041] , {icon: VANASPATHII }).addTo(map)
 // var popup14 = VANASPATHI.bindPopup('VANASPATHI (lab 5)')
 
-// var VANASPATHI2 = L.marker([10.699113611163199, 76.08873716325755] , {icon: VANASPATHII }).addTo(map)
-// var popup15 = VANASPATHI2.bindPopup('VANASPATHI (lab 6)')
+var PHALL = L.marker([10.698993692220384, 76.08847967120542] , {icon: PHALLI }).addTo(map)
+var popup15 = PHALL.bindPopup('Animation')
 
 // var VANASPATHI3 = L.marker([10.69900687012808, 76.08865803809793] , {icon: VANASPATHII }).addTo(map) //basement
 // var popup16 = VANASPATHI3.bindPopup('VANASPATHI (lab 4)')
@@ -190,8 +151,8 @@ var locator = L.icon({
 // var VANASPATHI4 = L.marker([10.698993692220384, 76.08847967120542] , {icon: VANASPATHII }).addTo(map)  //basement icon
 // var popup17 = VANASPATHI4.bindPopup('VANASPATHI (lab 7/3)')
 
-// var SOORYAKANTHAM = L.marker([10.699681578248015, 76.09008363215514] , {icon: SOORYAKANTHAMI }).addTo(map)
-// var popup18 = SOORYAKANTHAM.bindPopup('SOORYAKANTHAM')
+var AUD = L.marker([10.699681578248015, 76.09008363215514] , {icon: AUDI }).addTo(map)
+var popup18 = AUD.bindPopup('Stalls for Projects')
 
 // var SAHAANA = L.marker([10.699228150673088, 76.08961959249201] , {icon: SAHAANAI }).addTo(map)
 // var popup19 = SAHAANA.bindPopup('SAHAANA')
@@ -205,11 +166,11 @@ var locator = L.icon({
 // var SAAVERI = L.marker([10.69928599446213, 76.08911922144627] , {icon: SAAVERII }).addTo(map)
 // var popup22 = SAAVERI.bindPopup('SAAVERI')
 
-// var DHANASREE = L.marker([10.69984727509778, 76.08926198259117] , {icon: DHANASREEI }).addTo(map)
-// var popup23 = DHANASREE.bindPopup('DHANASREE')
+var LPHALL = L.marker([10.69984727509778, 76.08926198259117] , {icon: LPHALLI }).addTo(map)
+var popup23 = LPHALL.bindPopup('Art Gallery')
 
-// var NEELAMBHARI  = L.marker([10.700977467289936, 76.08880748844285] , {icon: NEELAMBHARII }).addTo(map)
-// var popup24 = NEELAMBHARI .bindPopup('NEELAMBHARI ')
+var AWCAUD  = L.marker([10.700977467289936, 76.08880748844285] , {icon: AWCAUDI }).addTo(map)
+var popup24 = AWCAUD.bindPopup('Inauguration, Validatory & Tech talk 1')
 
 // var SREERAGAM  = L.marker([10.701164826547634, 76.0891779969983] , {icon: SREERAGAMI }).addTo(map)
 // var popup25 = SREERAGAM .bindPopup('SREERAGAM ')
@@ -244,8 +205,8 @@ var locator = L.icon({
 // var BHAVAPRIYA = L.marker([10.69891198917551, 76.09035989972062] , {icon: BHAVAPRIYAI }).addTo(map)
 // var popup14 = BHAVAPRIYA.bindPopup('BHAVAPRIYA')
 
-// var KALYANI  = L.marker([10.699421732080468, 76.08992795794437] , {icon: KALYANII }).addTo(map)
-// var popup26 = KALYANI.bindPopup('KALYANI ')
+var AVROOM  = L.marker([10.699421732080468, 76.08992795794437] , {icon: AVROOMI }).addTo(map)
+var popup26 = AVROOM.bindPopup('Tech Talk 2 ')
 
 // var CHAKRAVAKAM  = L.marker([10.700121597915517, 76.08968359958921] , {icon: CHAKRAVAKAMI }).addTo(map)
 // var popup27 = CHAKRAVAKAM .bindPopup('CHAKRAVAKAM ')

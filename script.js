@@ -11,6 +11,7 @@ var lastLat,gpsloc, lastLong, circ ;
 //osm 
 var osm =  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 maxZoom: 21,
+minZoom: 18,
 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 })
 
@@ -19,6 +20,7 @@ attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreet
 //google sat
 var gsat =  L.tileLayer('http://{s}.google.com/vt?lyrs=s&x={x}&y={y}&z={z}',{
     maxZoom: 20,
+    minZoom: 18,
     subdomains:['mt0','mt1','mt2','mt3']
 });
 osm.addTo(map)

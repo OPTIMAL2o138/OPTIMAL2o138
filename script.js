@@ -18,11 +18,12 @@ attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreet
 
 
 //google sat
-var gsat =  L.tileLayer('http://{s}.google.com/vt?lyrs=s&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    minZoom: 18,
+var gsat =  L.tileLayer('https://{s}.google.com/vt?lyrs=s&x={x}&y={y}&z={z}',{
+    maxZoom: 21,
+    minZoom: 18, 
     subdomains:['mt0','mt1','mt2','mt3']
 });
+
 osm.addTo(map)
 
 
@@ -357,3 +358,12 @@ function centerOnLocator() {
 
 // Event listener for the button
 document.getElementById('center-locator').addEventListener('click', centerOnLocator);
+
+gsat.on('load', function() {
+    console.log("Satellite layer loaded successfully.");
+});
+
+gsat.on('error', function() {
+    console.warn("Satellite layer failed to load. Switching to OSM.");
+    osm.addTo(map);
+});

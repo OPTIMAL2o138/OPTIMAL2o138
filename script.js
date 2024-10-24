@@ -1,4 +1,4 @@
-var map = L.map('map',{attributionControl: true
+var map = L.map('map',{attributionControl: false
 }).setView([10.699473657441606, 76.08935567428753], 25);
 map.options.autoClose = false;
 
@@ -107,7 +107,15 @@ var BASKETI = L.icon({
     iconSize: [120, 69],
 })
 
+var MEN = L.icon({
+    iconUrl: 'images/menwc.png', 
+    iconSize: [25, 25],
+})
 
+var WOMAN = L.icon({
+    iconUrl: 'images/womenwc.png', 
+    iconSize: [25, 25],
+})
 
 
 // //bark
@@ -214,11 +222,14 @@ var popup24 = AWCAUD.bindPopup('Inauguration, Validatory & Tech talk 1')
 var AWCCON  = L.marker([10.701164826547634, 76.0891779969983] , {icon: AWCCONI }).addTo(map)
 var popup25 = AWCCON.bindPopup('Tech talk 3 ')
 
-// var LBLOCK  = L.marker([10.699734774872633, 76.08922161923914] , {icon: LBLOCKI }).addTo(map)
-// var popup28 = LBLOCK.bindPopup('Art Students Portrait & Live Doodle Wall')
-
 var IT2I  = L.marker([10.699479049837075, 76.09098536008268] , {icon: IT2I }).addTo(map)
 var popup31 = IT2I.bindPopup('Animation ')
+
+var WC1  = L.marker([10.699756982396757, 76.09078810391689] , {icon: MEN }).addTo(map)
+var popup28 = WC1.bindPopup('MEN WC')
+
+var WC2  = L.marker([10.699465264696688, 76.09076567900514] , {icon: WOMAN }).addTo(map)
+var popup28 = WC2.bindPopup('WOMEN WC')
 
 
 // var groundFloor = L.featureGroup([VANASPATHI,VANASPATHI2,VANASPATHI3,VANASPATHI4,SOORYAKANTHAM,SAHAANA,MOHANAM,
@@ -358,7 +369,7 @@ function getPosition(position) {
 
 function centerOnLocator() {
     if (gpsloc) {
-        map.setView(gpsloc.getLatLng(), 25); // Adjust the zoom level as needed
+        map.setView(gpsloc.getLatLng(), 20); // Adjust the zoom level as needed
     } else {
         alert("Locator is not available yet.");
     }

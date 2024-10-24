@@ -1,6 +1,8 @@
-var map = L.map('map').setView([10.699473657441606, 76.08935567428753], 25);
-
+var map = L.map('map',{attributionControl: true
+}).setView([10.699473657441606, 76.08935567428753], 25);
 map.options.autoClose = false;
+
+
 
 
 var lastLat,gpsloc, lastLong, circ ;
@@ -288,7 +290,7 @@ var popup26 = AVROOM.bindPopup('Tech Talk 2 ')
 
 var baseMaps = {
     "Sattelite": gsat,
-    "OSM": osm,
+    "Normal": osm,
 };
 
 var klm = L.geoJSON(pointJson, { 

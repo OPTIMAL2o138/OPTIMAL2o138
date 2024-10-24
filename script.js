@@ -67,6 +67,30 @@ var PHALLI = L.icon({
     iconSize: [120, 69],
 })
 
+var AWCCONI = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
+
+var LBLOCKI = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
+
+var IT7I = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
+
+var IT2I = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
+
+var BASKETI = L.icon({
+    iconUrl: 'images/icong.png', 
+    iconSize: [120, 69],
+})
 
 
 
@@ -145,8 +169,8 @@ var PHALLI = L.icon({
 var PHALL = L.marker([10.698993692220384, 76.08847967120542] , {icon: PHALLI }).addTo(map)
 var popup15 = PHALL.bindPopup('Animation')
 
-// var VANASPATHI3 = L.marker([10.69900687012808, 76.08865803809793] , {icon: VANASPATHII }).addTo(map) //basement
-// var popup16 = VANASPATHI3.bindPopup('VANASPATHI (lab 4)')
+var IT7 = L.marker([10.69900687012808, 76.08865803809793] , {icon: IT7I }).addTo(map) //basement
+var popup16 = IT7.bindPopup('Digital Painting')
 
 // var VANASPATHI4 = L.marker([10.698993692220384, 76.08847967120542] , {icon: VANASPATHII }).addTo(map)  //basement icon
 // var popup17 = VANASPATHI4.bindPopup('VANASPATHI (lab 7/3)')
@@ -163,8 +187,8 @@ var popup18 = AUD.bindPopup('Stalls for Projects')
 // var HAMSADHWANI = L.marker([10.699275148752525, 76.08925903100317] , {icon: HAMSADHWANII }).addTo(map)
 // var popup21 = HAMSADHWANI.bindPopup('HAMSADHWANI')
 
-// var SAAVERI = L.marker([10.69928599446213, 76.08911922144627] , {icon: SAAVERII }).addTo(map)
-// var popup22 = SAAVERI.bindPopup('SAAVERI')
+var BASKET = L.marker([10.699085438175953, 76.0901351658674] , {icon: BASKETI }).addTo(map)
+var popup22 = BASKET.bindPopup('Robo Race')
 
 var LPHALL = L.marker([10.69984727509778, 76.08926198259117] , {icon: LPHALLI }).addTo(map)
 var popup23 = LPHALL.bindPopup('Art Gallery')
@@ -172,14 +196,14 @@ var popup23 = LPHALL.bindPopup('Art Gallery')
 var AWCAUD  = L.marker([10.700977467289936, 76.08880748844285] , {icon: AWCAUDI }).addTo(map)
 var popup24 = AWCAUD.bindPopup('Inauguration, Validatory & Tech talk 1')
 
-// var SREERAGAM  = L.marker([10.701164826547634, 76.0891779969983] , {icon: SREERAGAMI }).addTo(map)
-// var popup25 = SREERAGAM .bindPopup('SREERAGAM ')
+var AWCCON  = L.marker([10.701164826547634, 76.0891779969983] , {icon: AWCCONI }).addTo(map)
+var popup25 = AWCCON.bindPopup('Tech talk 3 ')
 
-// var MARWA  = L.marker([10.700059777622847, 76.08968569567418] , {icon: MARWAI }).addTo(map)
-// var popup28 = MARWA.bindPopup('MARWA ')
+var LBLOCK  = L.marker([10.699734774872633, 76.08922161923914] , {icon: LBLOCKI }).addTo(map)
+var popup28 = LBLOCK.bindPopup('Art Students Portrait & Live Doodle Wall')
 
-// var ANANDABHAIRAVI  = L.marker([10.700088243025572, 76.08966118726822] , {icon: ANANDABHAIRAVII }).addTo(map)
-// var popup31 = ANANDABHAIRAVI.bindPopup('ANANDABHAIRAVI ')
+var IT2I  = L.marker([10.699479049837075, 76.09098536008268] , {icon: IT2I }).addTo(map)
+var popup31 = IT2I.bindPopup('Animation ')
 
 
 // var groundFloor = L.featureGroup([VANASPATHI,VANASPATHI2,VANASPATHI3,VANASPATHI4,SOORYAKANTHAM,SAHAANA,MOHANAM,

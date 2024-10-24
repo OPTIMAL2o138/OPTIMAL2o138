@@ -292,7 +292,7 @@ var popup26 = AVROOM.bindPopup('Tech Talk 2 ')
 //birder
 
 var baseMaps = {
-    "Sattelite": gsat,
+    "Satellite": gsat,
     "Normal": osm,
 };
 

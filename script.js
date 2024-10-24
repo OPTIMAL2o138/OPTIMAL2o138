@@ -26,13 +26,12 @@ var gsat =  L.tileLayer('https://{s}.google.com/vt?lyrs=s&x={x}&y={y}&z={z}',{
 
 osm.addTo(map)
 
-var southWest = L.latLng(10.697980491639417, 76.08625726633821); // Replace with your coordinates
-var northEast = L.latLng(10.702119095107774, 76.09185161363287); // Replace with your coordinates
+var southWest = L.latLng(10.698375399010823, 76.0870128247687); 
+var northEast = L.latLng(10.701350351157298, 76.09170157366809); 
 
-// Create a LatLngBounds object
 var bounds = L.latLngBounds(southWest, northEast);
 
-// Set the max bounds for the map
+
 map.setMaxBounds(bounds);
 
 

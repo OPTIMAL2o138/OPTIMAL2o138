@@ -2,7 +2,8 @@ var map = L.map('map').setView([10.699473657441606, 76.08935567428753], 25);
 
 map.options.autoClose = false;
 
-var gpsMarker; 
+
+var lastLat,gpsMarker, lastLong, accuracyCircle ;
 
 
 //osm 
@@ -318,7 +319,6 @@ if (!navigator.geolocation) {
     }, 2000);
 }
 
-var lastLat, lastLong, accuracyCircle ;
 
 function getPosition(position) {
     var lat = position.coords.latitude;
@@ -334,8 +334,10 @@ function getPosition(position) {
         map.removeLayer(accuracyCircle);
     }
 
-    // Create a new marker
-    gpsMarker = L.marker([lat, long], { icon: locator }).addTo(map); // Use locator icon
+    // Create a new marker with the locator icon
+    gpsMarker = L.marker([lat, long], { icon: locator }).addTo(map);
+
+    // Create and add accuracy circle
     accuracyCircle = L.circle([lat, long], { radius: accuracy }).addTo(map);
 
     // Calculate rotation if last coordinates exist
@@ -349,8 +351,10 @@ function getPosition(position) {
     lastLong = long;
 }
 
+
 L.Marker.prototype.setRotationAngle = function(angle) {
     this.getElement().style.transform = 'rotate(' + angle + 'deg)';
+    this.getElement().style.transformOrigin = 'center'; // Ensure rotation around the center
 };
 
 

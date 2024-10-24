@@ -5,12 +5,13 @@ body {
         
 
 .leaflet-popup-content-wrapper {
-    background-color: blueviolet;
-    color: aliceblue;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    color: rgb(0, 0, 0);
 }
 
 .leaflet-popup-tip {
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -63,4 +64,9 @@ body {
     width: 100%; /* Make the text span the full width of the marker */
     white-space: nowrap;
     right: 20
+}
+
+.leaflet-div-icon {
+    transform-origin: center;
+    transition: transform 0.1s; /* Smooth transition */
 }

@@ -2,6 +2,7 @@ var map = L.map('map').setView([10.699473657441606, 76.08935567428753], 25);
 
 map.options.autoClose = false;
 
+var gpsMarker; 
 
 
 //osm 
@@ -43,32 +44,32 @@ var locator = L.icon({
 })
 
 var AWCAUDI = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/AWCAUD.png', 
     iconSize: [120, 69],
 })
 
 var AUDI = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/AUD.png', 
     iconSize: [120, 69],
 })
 
 var LPHALLI = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/LPHALL.png', 
     iconSize: [120, 69],
 })
 
 var AVROOMI = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/AVR.png', 
     iconSize: [120, 69],
 })
 
 var PHALLI = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/ANIM.png', 
     iconSize: [120, 69],
 })
 
 var AWCCONI = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/AWCON.png', 
     iconSize: [120, 69],
 })
 
@@ -78,17 +79,17 @@ var LBLOCKI = L.icon({
 })
 
 var IT7I = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/IT7.png', 
     iconSize: [120, 69],
 })
 
 var IT2I = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/ANIM.png', 
     iconSize: [120, 69],
 })
 
 var BASKETI = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/BASKET.png', 
     iconSize: [120, 69],
 })
 
@@ -187,7 +188,7 @@ var popup18 = AUD.bindPopup('Stalls for Projects')
 // var HAMSADHWANI = L.marker([10.699275148752525, 76.08925903100317] , {icon: HAMSADHWANII }).addTo(map)
 // var popup21 = HAMSADHWANI.bindPopup('HAMSADHWANI')
 
-var BASKET = L.marker([10.699085438175953, 76.0901351658674] , {icon: BASKETI }).addTo(map)
+var BASKET = L.marker([10.698996931135266, 76.09000726393536] , {icon: BASKETI }).addTo(map)
 var popup22 = BASKET.bindPopup('Robo Race')
 
 var LPHALL = L.marker([10.69984727509778, 76.08926198259117] , {icon: LPHALLI }).addTo(map)
@@ -199,8 +200,8 @@ var popup24 = AWCAUD.bindPopup('Inauguration, Validatory & Tech talk 1')
 var AWCCON  = L.marker([10.701164826547634, 76.0891779969983] , {icon: AWCCONI }).addTo(map)
 var popup25 = AWCCON.bindPopup('Tech talk 3 ')
 
-var LBLOCK  = L.marker([10.699734774872633, 76.08922161923914] , {icon: LBLOCKI }).addTo(map)
-var popup28 = LBLOCK.bindPopup('Art Students Portrait & Live Doodle Wall')
+// var LBLOCK  = L.marker([10.699734774872633, 76.08922161923914] , {icon: LBLOCKI }).addTo(map)
+// var popup28 = LBLOCK.bindPopup('Art Students Portrait & Live Doodle Wall')
 
 var IT2I  = L.marker([10.699479049837075, 76.09098536008268] , {icon: IT2I }).addTo(map)
 var popup31 = IT2I.bindPopup('Animation ')
@@ -297,22 +298,10 @@ var klm = L.geoJSON(pointJson, {
     
     );
 
-var overlayMaps = {
-    "Ground floor" :groundFloor,
-    "1st Floor" : firstfloor,
-    "2nd Floor" : secondfloor
-    };
+var overlayMaps = {}
 
 
-var layerControl = L.control.layers(baseMaps, overlayMaps, { collapsed: false}).addTo(map);
-
-
-//geojson
-groundFloor.addTo(map)
-firstfloor.addTo(map)
-secondfloor.addTo(map)
-
-
+var layerControl = L.control.layers(baseMaps,overlayMaps,{ collapsed: false}).addTo(map);
 
 
 
@@ -329,7 +318,7 @@ if (!navigator.geolocation) {
     }, 2000);
 }
 
-var gpsloc, circ;
+var lastLat, lastLong, accuracyCircle ;
 
 function getPosition(position) {
     var lat = position.coords.latitude;
@@ -337,25 +326,32 @@ function getPosition(position) {
     var accuracy = position.coords.accuracy;
 
     // Remove previous location marker and accuracy circle if they exist
-    if (gpsloc) {
-        map.removeLayer(gpsloc);
+    if (gpsMarker) {
+        map.removeLayer(gpsMarker);
     }
 
-    if (circ) {
-        map.removeLayer(circ);
+    if (accuracyCircle) {
+        map.removeLayer(accuracyCircle);
     }
 
-    gpsloc = L.marker([lat, long], { icon: locator });
-    circ = L.circle([lat, long], { radius: accuracy });
+    // Create a new marker
+    gpsMarker = L.marker([lat, long], { icon: locator }).addTo(map); // Use locator icon
+    accuracyCircle = L.circle([lat, long], { radius: accuracy }).addTo(map);
 
-    // Add the new marker and accuracy circle to the map
-    var pointer = L.featureGroup([gpsloc, circ]).addTo(map);
+    // Calculate rotation if last coordinates exist
+    if (lastLat !== undefined && lastLong !== undefined) {
+        var angle = Math.atan2(lat - lastLat, long - lastLong) * (180 / Math.PI);
+        gpsMarker.setRotationAngle(angle); // Set rotation angle
+    }
 
-    
-
-    console.log("Latitude:", lat);
-    console.log("Longitude:", long);
-    console.log("Accuracy:", accuracy);
+    // Update last known position
+    lastLat = lat;
+    lastLong = long;
 }
+
+L.Marker.prototype.setRotationAngle = function(angle) {
+    this.getElement().style.transform = 'rotate(' + angle + 'deg)';
+};
+
 
 // Include the Leaflet map initialization code here, which you already have in your original code.

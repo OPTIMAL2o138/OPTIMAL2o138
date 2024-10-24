@@ -3,7 +3,7 @@ var map = L.map('map').setView([10.699473657441606, 76.08935567428753], 25);
 map.options.autoClose = false;
 
 
-var lastLat,gpsMarker, lastLong, accuracyCircle ;
+var lastLat,gpsloc, lastLong, circ ;
 
 
 //osm 
@@ -319,6 +319,7 @@ if (!navigator.geolocation) {
     }, 2000);
 }
 
+var gpsloc, circ;
 
 function getPosition(position) {
     var lat = position.coords.latitude;
@@ -326,36 +327,29 @@ function getPosition(position) {
     var accuracy = position.coords.accuracy;
 
     // Remove previous location marker and accuracy circle if they exist
-    if (gpsMarker) {
-        map.removeLayer(gpsMarker);
+    if (gpsloc) {
+        map.removeLayer(gpsloc);
     }
 
-    if (accuracyCircle) {
-        map.removeLayer(accuracyCircle);
+    if (circ) {
+        map.removeLayer(circ);
     }
 
-    // Create a new marker with the locator icon
-    gpsMarker = L.marker([lat, long], { icon: locator }).addTo(map);
+    gpsloc = L.marker([lat, long], { icon: locator });
+    circ = L.circle([lat, long], { radius: accuracy });
 
-    // Create and add accuracy circle
-    accuracyCircle = L.circle([lat, long], { radius: accuracy }).addTo(map);
+    // Add the new marker and accuracy circle to the map
+    var pointer = L.featureGroup([gpsloc, circ]).addTo(map);
+}
+// Include the Leaflet map initialization code here, which you already have in your original code.
 
-    // Calculate rotation if last coordinates exist
-    if (lastLat !== undefined && lastLong !== undefined) {
-        var angle = Math.atan2(lat - lastLat, long - lastLong) * (180 / Math.PI);
-        gpsMarker.setRotationAngle(angle); // Set rotation angle
+function centerOnLocator() {
+    if (gpsloc) {
+        map.setView(gpsloc.getLatLng(), 25); // Adjust the zoom level as needed
+    } else {
+        alert("Locator is not available yet.");
     }
-
-    // Update last known position
-    lastLat = lat;
-    lastLong = long;
 }
 
-
-L.Marker.prototype.setRotationAngle = function(angle) {
-    this.getElement().style.transform = 'rotate(' + angle + 'deg)';
-    this.getElement().style.transformOrigin = 'center'; // Ensure rotation around the center
-};
-
-
-// Include the Leaflet map initialization code here, which you already have in your original code.
+// Event listener for the button
+document.getElementById('center-locator').addEventListener('click', centerOnLocator);

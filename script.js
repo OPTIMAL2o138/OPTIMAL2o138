@@ -229,7 +229,7 @@ var WC1  = L.marker([10.699756982396757, 76.09078810391689] , {icon: MEN }).addT
 var popup28 = WC1.bindPopup('MEN WC')
 
 var WC2  = L.marker([10.699465264696688, 76.09076567900514] , {icon: WOMAN }).addTo(map)
-var popup28 = WC2.bindPopup('WOMEN WC')
+var popup29 = WC2.bindPopup('WOMEN WC')
 
 
 // var groundFloor = L.featureGroup([VANASPATHI,VANASPATHI2,VANASPATHI3,VANASPATHI4,SOORYAKANTHAM,SAHAANA,MOHANAM,

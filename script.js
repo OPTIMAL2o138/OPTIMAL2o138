@@ -225,10 +225,9 @@ var popup25 = AWCCON.bindPopup('Tech talk 3 ')
 var IT2I  = L.marker([10.699479049837075, 76.09098536008268] , {icon: IT2I }).addTo(map)
 var popup31 = IT2I.bindPopup('Animation ')
 
-var WC1  = L.marker([10.699756982396757, 76.09078810391689] , {icon: MEN }).addTo(map)
-var popup28 = WC1.bindPopup('MEN WC')
+var WC1  = L.marker([10.699756982396757, 76.09078810391689] , {icon: MEN })
 
-var WC2  = L.marker([10.699465264696688, 76.09076567900514] , {icon: WOMAN }).addTo(map)
+var WC2  = L.marker([10.699465264696688, 76.09076567900514] , {icon: WOMAN })
 var popup29 = WC2.bindPopup('WOMEN WC')
 
 

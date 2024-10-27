@@ -88,7 +88,7 @@ var AWCCONI = L.icon({
 })
 
 var LBLOCKI = L.icon({
-    iconUrl: 'images/icong.png', 
+    iconUrl: 'images/LBLOCK.png', 
     iconSize: [120, 69],
 })
 
@@ -119,7 +119,12 @@ var WOMAN = L.icon({
 
 var WATI = L.icon({
     iconUrl: 'images/water.png', 
-    iconSize: [50, 50],
+    iconSize: [40, 40],
+})
+
+var CBLOCKI = L.icon({
+    iconUrl: 'images/CBLOCK.png', 
+    iconSize: [120, 69],
 })
 
 // //bark
@@ -212,7 +217,7 @@ var popup18 = AUD.bindPopup('Stalls for Projects')
 // var popup20 = MOHANAM.bindPopup('MOHANAM')
 
 var WAT1 = L.marker([10.69963860591484, 76.09035700713237] , {icon: WATI }).addTo(map)
-var popup21 = WAT1.bindPopup('Water')
+var popup69 = WAT1.bindPopup('Water')
 
 var WAT2 = L.marker([10.699214490503316, 76.08887244940611] , {icon: WATI }).addTo(map)
 var popup70 = WAT2.bindPopup('Water')
@@ -239,7 +244,7 @@ var BASKET = L.marker([10.698996931135266, 76.09000726393536] , {icon: BASKETI }
 var popup22 = BASKET.bindPopup('Robo Race')
 
 var LPHALL = L.marker([10.69984727509778, 76.08926198259117] , {icon: LPHALLI }).addTo(map)
-var popup23 = LPHALL.bindPopup('Art Gallery')
+var popup23 = LPHALL.bindPopup('Visual Coding & Games')
 
 var AWCAUD  = L.marker([10.700977467289936, 76.08880748844285] , {icon: AWCAUDI }).addTo(map)
 var popup24 = AWCAUD.bindPopup('Inauguration, Validatory & Tech talk 1')
@@ -263,8 +268,8 @@ var popup29 = WC2.bindPopup('WOMEN WC')
 
 // //FIRST FLOOR
 
-// var BHILAHARI = L.marker([10.699464058173962, 76.09059998782192] , {icon: BHILAHARII }).addTo(map)
-// var popup7 = BHILAHARI.bindPopup('BHILAHARI')
+var LBLOCK = L.marker([10.699660717021805, 76.08921369895897] , {icon: LBLOCKI }).addTo(map)
+var popup7 = LBLOCK.bindPopup('Portraits & Live Doodle Wall')
 
 // var CHARUKESI = L.marker([10.700112766989852, 76.08937266618754 ] , {icon: CHARUKESII }).addTo(map)
 // var popup8 = CHARUKESI.bindPopup('CHARUKESI')
@@ -283,8 +288,8 @@ var popup29 = WC2.bindPopup('WOMEN WC')
 var AVROOM  = L.marker([10.699421732080468, 76.08992795794437] , {icon: AVROOMI }).addTo(map)
 var popup26 = AVROOM.bindPopup('Tech Talk 2 ')
 
-// var CHAKRAVAKAM  = L.marker([10.700121597915517, 76.08968359958921] , {icon: CHAKRAVAKAMI }).addTo(map)
-// var popup27 = CHAKRAVAKAM .bindPopup('CHAKRAVAKAM ')
+var CBLOCK  = L.marker([10.698891589881574, 76.09030999060764] , {icon: CBLOCKI }).addTo(map)
+var popup27 = CBLOCK.bindPopup('Art Gallery ')
 
 // var BIHAG  = L.marker([10.700079818476514, 76.08963181684805] , {icon: BIHAGI }).addTo(map)
 // var popup26 = BIHAG .bindPopup('BIHAG ')

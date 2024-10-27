@@ -98,7 +98,7 @@ var IT7I = L.icon({
 })
 
 var IT2I = L.icon({
-    iconUrl: 'images/ANIM.png', 
+    iconUrl: 'images/IT2.png', 
     iconSize: [120, 69],
 })
 
@@ -117,6 +117,10 @@ var WOMAN = L.icon({
     iconSize: [25, 25],
 })
 
+var WATI = L.icon({
+    iconUrl: 'images/water.png', 
+    iconSize: [50, 50],
+})
 
 // //bark
 
@@ -207,8 +211,29 @@ var popup18 = AUD.bindPopup('Stalls for Projects')
 // var MOHANAM = L.marker([10.69921730496142, 76.08941355735553] , {icon: MOHANAMI }).addTo(map)
 // var popup20 = MOHANAM.bindPopup('MOHANAM')
 
-// var HAMSADHWANI = L.marker([10.699275148752525, 76.08925903100317] , {icon: HAMSADHWANII }).addTo(map)
-// var popup21 = HAMSADHWANI.bindPopup('HAMSADHWANI')
+var WAT1 = L.marker([10.69963860591484, 76.09035700713237] , {icon: WATI }).addTo(map)
+var popup21 = WAT1.bindPopup('Water')
+
+var WAT2 = L.marker([10.699214490503316, 76.08887244940611] , {icon: WATI }).addTo(map)
+var popup70 = WAT2.bindPopup('Water')
+
+var WAT3 = L.marker([10.700923748673942, 76.0886301128648] , {icon: WATI }).addTo(map)
+var popup71 = WAT3.bindPopup('Water')
+
+var WAT4 = L.marker([10.701216440918039, 76.0891263015702] , {icon: WATI }).addTo(map)
+var popup72 = WAT4.bindPopup('Water')
+
+var WAT5 = L.marker([10.699433601331375, 76.09006628996319] , {icon: WATI }).addTo(map)
+var popup73 = WAT5.bindPopup('Water')
+
+var WAT6 = L.marker([10.699038122446694, 76.08833396783021] , {icon: WATI }).addTo(map)
+var popup74 = WAT6.bindPopup('Water')
+
+var WAT7 = L.marker([10.699855810430364, 76.08911851396898] , {icon: WATI }).addTo(map)
+var popup75 = WAT7.bindPopup('Water')
+
+
+
 
 var BASKET = L.marker([10.698996931135266, 76.09000726393536] , {icon: BASKETI }).addTo(map)
 var popup22 = BASKET.bindPopup('Robo Race')
@@ -223,9 +248,13 @@ var AWCCON  = L.marker([10.701164826547634, 76.0891779969983] , {icon: AWCCONI }
 var popup25 = AWCCON.bindPopup('Tech talk 3 ')
 
 var IT2I  = L.marker([10.699479049837075, 76.09098536008268] , {icon: IT2I }).addTo(map)
-var popup31 = IT2I.bindPopup('Animation ')
+var popup31 = IT2I.bindPopup('Tech Talk 4 ')
 
 var WC1  = L.marker([10.699756982396757, 76.09078810391689] , {icon: MEN })
+<<<<<<< HEAD
+=======
+var popup28 = WC1.bindPopup('MEN WC')
+>>>>>>> af4107c (v2.0.0)
 
 var WC2  = L.marker([10.699465264696688, 76.09076567900514] , {icon: WOMAN })
 var popup29 = WC2.bindPopup('WOMEN WC')

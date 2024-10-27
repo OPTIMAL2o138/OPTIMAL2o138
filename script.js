@@ -251,10 +251,7 @@ var IT2I  = L.marker([10.699479049837075, 76.09098536008268] , {icon: IT2I }).ad
 var popup31 = IT2I.bindPopup('Tech Talk 4 ')
 
 var WC1  = L.marker([10.699756982396757, 76.09078810391689] , {icon: MEN })
-<<<<<<< HEAD
-=======
 var popup28 = WC1.bindPopup('MEN WC')
->>>>>>> af4107c (v2.0.0)
 
 var WC2  = L.marker([10.699465264696688, 76.09076567900514] , {icon: WOMAN })
 var popup29 = WC2.bindPopup('WOMEN WC')

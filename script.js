@@ -198,7 +198,7 @@ var CBLOCKI = L.icon({
 // var VANASPATHI = L.marker([10.69920717425842, 76.0887210700041] , {icon: VANASPATHII }).addTo(map)
 // var popup14 = VANASPATHI.bindPopup('VANASPATHI (lab 5)')
 
-var PHALL = L.marker([10.698993692220384, 76.08847967120542] , {icon: PHALLI }).addTo(map)
+var PHALL = L.marker([10.699025523484186, 76.08837751645358] , {icon: PHALLI }).addTo(map)
 var popup15 = PHALL.bindPopup('Animation')
 
 var IT7 = L.marker([10.69900687012808, 76.08865803809793] , {icon: IT7I }).addTo(map) //basement

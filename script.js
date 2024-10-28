@@ -199,7 +199,7 @@ var CBLOCKI = L.icon({
 // var popup14 = VANASPATHI.bindPopup('VANASPATHI (lab 5)')
 
 var PHALL = L.marker([10.699025523484186, 76.08837751645358] , {icon: PHALLI }).addTo(map)
-var popup15 = PHALL.bindPopup('Animation')
+var popup15 = PHALL.bindPopup('Animation Cat 1&4 ')
 
 var IT7 = L.marker([10.69900687012808, 76.08865803809793] , {icon: IT7I }).addTo(map) //basement
 var popup16 = IT7.bindPopup('Digital Painting')
@@ -213,8 +213,8 @@ var popup18 = AUD.bindPopup('Stalls for Projects')
 // var SAHAANA = L.marker([10.699228150673088, 76.08961959249201] , {icon: SAHAANAI }).addTo(map)
 // var popup19 = SAHAANA.bindPopup('SAHAANA')
 
-// var MOHANAM = L.marker([10.69921730496142, 76.08941355735553] , {icon: MOHANAMI }).addTo(map)
-// var popup20 = MOHANAM.bindPopup('MOHANAM')
+var LP = L.marker([10.699778122228965, 76.08911256977548] , {icon: PHALLI }).addTo(map)
+var popup20 = LP.bindPopup('Animation Cat 2&3')
 
 var WAT1 = L.marker([10.69963860591484, 76.09035700713237] , {icon: WATI }).addTo(map)
 var popup69 = WAT1.bindPopup('Water')
